@@ -1,5 +1,5 @@
 # CS111A Section 5
-_CS111A Code Repository for Section 5 (Fall 2022)_
+_CS111A Code Repository for Section 5 (Winter 2023)_
 
 Welcome back to CS111A! Today we'll be talking about file-related system calls... 
 
