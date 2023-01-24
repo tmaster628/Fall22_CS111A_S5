@@ -36,31 +36,6 @@ const char *CAT = "cat";
  *    to keep that open as reference.
 */
 int main (int argc, char *argv[]) {
-    int outFD = open(FILE_NAME_OUT, O_TRUNC | O_CREAT | O_RDWR, 0777);
-    int inFD = open(FILE_NAME_IN, O_RDONLY);
-
-    char buf[buf_sz];
-
-    while (true) {
-        ssize_t bytesRead = read(inFD, buf, sizeof(buf));
-        if (bytesRead == 0) break;
-
-        // loop looking for "cat"
-        for (size_t i = 0; i < bytesRead - 3; i++) {
-            if (strncasecmp(CAT, buf + i, strlen(CAT)) == 0) {
-                buf[i] = buf[i] - 1; // subtract ascii value by 1
-
-
-            } 
-        }
-
-        size_t bytesWritten = 0;
-        while (bytesWritten < bytesRead) {
-            ssize_t count = write(outFD, buf + bytesWritten, bytesRead - bytesWritten);
-            bytesWritten += count;
-        }
-    }
-    close (inFD);
-    close (outFD);
+    // TODO implement me!
     return 0;
 }
